@@ -153,7 +153,7 @@
   }
   nav.main-nav a:hover::after{right:0;}
 
-  /* LINKEDIN BUTTON (Replaced Dropdown) */
+  /* LINKEDIN BUTTON */
   .btn-linkedin{
     background:var(--theme-color);
     color:#ffffff;
@@ -952,7 +952,6 @@
     <a href="#portfolio">Portfolio</a>
   </nav>
   
-  <!-- Replaced Social Link Dropdown with simple LinkedIn Button -->
   <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-linkedin">
     <svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#fff"/><path fill="#0A66C2" d="M7.2 9.6h2.6v8.4H7.2V9.6zm1.3-4.1a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM11.4 9.6h2.5v1.15h.03c.35-.66 1.2-1.35 2.47-1.35 2.64 0 3.13 1.74 3.13 4v4.6h-2.6v-4.08c0-.97-.02-2.22-1.35-2.22-1.36 0-1.57 1.06-1.57 2.15v4.15h-2.6V9.6z"/></svg>
     LinkedIn
@@ -978,7 +977,7 @@
     <div class="portrait-wrap">
       <div class="ring-rotate"></div>
       <div class="portrait-photo">
-        <!-- Profile Pic Updated to your GitHub Link -->
+        <!-- Profile Picture link updated exactly as per PDF -->
         <img src="https://raw.githubusercontent.com/habibagoogleads/portfolio-main/Habiba_Akter_Profile_Pic.jpeg" alt="HABIBA AKTER">
         <div class="portrait-dot"></div>
       </div>
@@ -1316,7 +1315,7 @@
   buildServicesTabs();
 
   // ============ PORTFOLIO TABS SCRIPT ============
-  // !! UPDATED IMAGE LINKS HERE !!
+  // !! 100% UPDATED LINKS FROM YOUR PDF AND SCREENSHOTS !!
   const portfolioData = [
     {
       title: 'Website Tracking', type: 'subtype',
@@ -1416,12 +1415,26 @@
     {
       title: 'Data Visualization', type: 'process',
       items: [
-        { name: 'Normal Dashboard', desc: 'A general-purpose Looker Studio dashboard giving an overview of key performance metrics at a glance.', images: ['https://raw.githubusercontent.com/iamrethoy/Portfolio/main/glc_01.jpg','https://raw.githubusercontent.com/iamrethoy/Portfolio/main/glc_02.jpg'] },
-        { name: 'Meta Dashboard', desc: 'A dedicated dashboard tracking Meta (Facebook & Instagram) ad performance and campaign metrics.', images: ['https://raw.githubusercontent.com/iamrethoy/Portfolio/main/glc_meta_ads_01.jpg'] },
-        { name: 'Google Dashboard', desc: 'A dedicated dashboard tracking Google Ads performance, spend and conversion metrics.', images: ['https://raw.githubusercontent.com/iamrethoy/Portfolio/main/glc_google_ads_01.jpg'] },
-        { name: 'Instagram Dashboard', desc: 'A dedicated dashboard tracking Instagram ad performance and engagement metrics.', images: ['https://raw.githubusercontent.com/iamrethoy/Portfolio/main/glc_igads_01.jpg'] },
-        { name: 'Google Search Console Dashboard', desc: 'A dashboard built on Google Search Console data to track organic search performance and keyword visibility.', images: ['https://raw.githubusercontent.com/iamrethoy/Portfolio/main/glc_search_console_01.jpg'] },
-        { name: 'Blended Data Dashboard', desc: 'A blended data source dashboard combining multiple platforms into a single, unified view of performance.', images: ['https://raw.githubusercontent.com/iamrethoy/Portfolio/main/glc_blended_data_01.jpg','https://raw.githubusercontent.com/iamrethoy/Portfolio/main/glc_blended_data_02.jpg'] }
+        { name: 'Normal Dashboard', desc: 'A general-purpose Looker Studio dashboard giving an overview of key performance metrics at a glance.', images: [
+            'https://raw.githubusercontent.com/habibagoogleads/portfolio-main/glc_01.jpg',
+            'https://raw.githubusercontent.com/habibagoogleads/portfolio-main/glc_02.jpg'
+        ] },
+        { name: 'Meta Dashboard', desc: 'A dedicated dashboard tracking Meta (Facebook & Instagram) ad performance and campaign metrics.', images: [
+            'https://raw.githubusercontent.com/habibagoogleads/portfolio-main/glc_meta_ads_01.jpg'
+        ] },
+        { name: 'Google Dashboard', desc: 'A dedicated dashboard tracking Google Ads performance, spend and conversion metrics.', images: [
+            'https://raw.githubusercontent.com/habibagoogleads/portfolio-main/glc_google_ads_01.jpg'
+        ] },
+        { name: 'Instagram Dashboard', desc: 'A dedicated dashboard tracking Instagram ad performance and engagement metrics.', images: [
+            'https://raw.githubusercontent.com/habibagoogleads/portfolio-main/glc_igads_01.jpg'
+        ] },
+        { name: 'Google Search Console Dashboard', desc: 'A dashboard built on Google Search Console data to track organic search performance and keyword visibility.', images: [
+            'https://raw.githubusercontent.com/habibagoogleads/portfolio-main/glc_search_console_01.jpg'
+        ] },
+        { name: 'Blended Data Dashboard', desc: 'A blended data source dashboard combining multiple platforms into a single, unified view of performance.', images: [
+            'https://raw.githubusercontent.com/habibagoogleads/portfolio-main/glc_blended_data_01.jpg',
+            'https://raw.githubusercontent.com/habibagoogleads/portfolio-main/glc_blended_data_02.jpg'
+        ] }
       ]
     }
   ];
@@ -1509,7 +1522,7 @@
         mediaEl.classList.toggle('has-image', images.length > 0);
         if(images.length === 0){
           mediaEl.innerHTML = `<div class="pf-img-placeholder">${pfPlaceholderSVG}Image coming soon</div>`;
-          mediaEl.onclick = null; /* Bug fix here so it doesn't open previous images */
+          mediaEl.onclick = null; 
           return;
         }
         const img = document.createElement('img');
